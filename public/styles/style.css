@@ -7,7 +7,7 @@
 body {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to top, #ed0f0f 100%, #68e0cf 200%);
+    background-image: linear-gradient(to top, #ffffff 100%, #68e0cf 200%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ button {
     width: 100%;
     height: 65px;
     overflow: hidden;
-    background-color: #0d0b00;
+    background-color: #ffffff;
 
     &__info {
         &.right {
