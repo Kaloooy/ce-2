@@ -13,19 +13,19 @@ pipeline{
         } 
         stage('Testing Environment'){
             steps{
-            sh '/usr/bin/firebase deploy -P testing-ce-2 --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P testing-ce-2 --token "$FIREBASE_DEPLOY_TOKEN"'
             input message: 'After testing. Do you want to continue with Staging Environment? (Click "Proceed" to continue)'
             }
         } 
         stage('Staging Environment'){
             steps{
-             sh '/usr/bin/firebase deploy -P staging-ce-2 --token "$FIREBASE_DEPLOY_TOKEN"'
+             sh 'firebase deploy -P staging-ce-2 --token "$FIREBASE_DEPLOY_TOKEN"'
              echo  'Building'
             }
         } 
         stage('Production Environment'){
             steps{
-            sh '/usr/bin/firebase deploy -P production-ce-2 --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P production-ce-2 --token "$FIREBASE_DEPLOY_TOKEN"'
             echo 'Building'
             }
         } 
